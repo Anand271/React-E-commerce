@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Dcard from './Dcard'
 
 const Discount = () => {
@@ -12,8 +13,11 @@ const Discount = () => {
                             <h2>Big Discount</h2>
                         </div>
                         <div className="heading-right row">
+                            <Link to="/all-products">
                             <span>View all</span>
                             <i className="fa fa-caret-right"></i>
+                            </Link>
+                          
                         </div>
                     </div>
                     <Dcard />

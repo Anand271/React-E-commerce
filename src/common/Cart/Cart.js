@@ -7,30 +7,25 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
 
   return (
     <>
-      <section className='cart-items'>
-        <div className="container d_flex">
-          <div className="cart-details">
-            {cartItem.length === 0 && <h1 className='no-items product'>No Items are added in Cart</h1>}
+      <section className=' cart-items'>
+        <div className="cart-details">
+          {cartItem.length === 0 && <h1 className='no-items product'>No Items are added in Cart</h1>}
 
-            {cartItem.map((item) => {
-              const productQty = item.price * item.qty
-              return (
-                <div className="cart-list product d_flex">
-                  <div className="img">
-                    <img src={item.cover} alt="" />
-                  </div>
-                  <div className="cart-details">
-                    <h3>{item.name}</h3>
-                    <h4>
-                      {item.price}.00 * {item.qty}
-                      <span>${productQty}.00</span>
-                    </h4>
-                  </div>
-                  <div className="cart-items-function">
-                    <div className="removeCart">
-                      <button >
-                        <i className='fa -solid fa-xmark'></i>
-                      </button>
+          {cartItem.map((item) => {
+            const productQty = item.price * item.qty
+            return (
+              <div className="cart-list">
+                <div className="img">
+                  <img src={item.img} alt="" />
+                </div>
+                <div className="cart-details">
+                  <h3>{item.name}</h3>
+
+                  <div className="quantaty-manager">
+
+                    <div className='quantaty'>
+                      <p>{item.price}.00 * {item.qty}</p>
+                      <p>₹{productQty}.00</p>
                     </div>
 
                     <div className='cartControl d_flex'>
@@ -41,18 +36,24 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
                         <i className="fa fa-minus"></i>
                       </button>
                     </div>
-                  </div>  
-
-                </div> 
-              )
-            })}
-            <div className="cart-total product">
-              <h2>Cart Summary</h2>
-              <div className="d_flex">
-                <h4>Total Price : </h4>
-                <h3>${totalPrice}.00</h3>
+                  </div>
+                </div>
+                <div className="removeCart">
+                    <button >
+                      <i className='fa-solid fa-xmark'></i>
+                    </button>
+                  </div>
               </div>
-            </div>
+              
+            )
+          })}
+
+        </div>
+        <div className="cart-total">
+          <h2>Cart Summary</h2>
+          <div className="total-price">
+            <h4>Total Price : </h4>
+            <h3>₹ {totalPrice}.00</h3>
           </div>
         </div>
       </section>

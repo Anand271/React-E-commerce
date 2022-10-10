@@ -33,6 +33,8 @@ const FlashCard = ({ productItems, addToCart}) => {
         setCount(count +1)
      }
 
+     
+
     const settings = {
         dots: false,
         infinite: true,
@@ -43,6 +45,8 @@ const FlashCard = ({ productItems, addToCart}) => {
         prevArrow: <PrevArrow />
 
     };
+
+    
 
 
     return (
@@ -81,6 +85,7 @@ const FlashCard = ({ productItems, addToCart}) => {
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>)
                     })
                 }

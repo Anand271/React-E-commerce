@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import TopCart from './TopCart'
 import "./top.css"
 
@@ -13,8 +14,10 @@ const TopCate = () => {
                             <h2>Top Categories </h2>
                         </div>
                         <div className="heading-right row">
-                            <span>View all</span>
+                        <Link to="/all-products"> 
+                        <span>View all</span>
                             <i className="fa fa-caret-right"></i>
+                        </Link>
                         </div>
                     </div>
                     <TopCart />

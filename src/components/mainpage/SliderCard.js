@@ -1,5 +1,7 @@
 import React from 'react'
 import Sdata from './Sdate'
+import { Link } from 'react-router-dom'
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,9 +16,9 @@ const SliderCard = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay:true,
-        appendDots:(dots)=>{
-            return  <ul style={{margin:"0px"}}>{dots}</ul>
+        autoplay: true,
+        appendDots: (dots) => {
+            return <ul style={{ margin: "0px" }}>{dots}</ul>
         },
     };
 
@@ -24,21 +26,37 @@ const SliderCard = () => {
 
     return (
         <>
-        <Slider {...settings}>
-            {Sdata.map((value, index) => {
+            <Slider {...settings}>
+                {Sdata.map((value, index) => {
 
-                return (<div className="box d_flex top" key={index}>
-                    <div className="left">
-                        <h1>{value.title}</h1>
-                        <p>{value.desc}</p>
-                        <button className='btn-primary'>Visit Collections</button>
-                    </div>
-                    <div className="right">
-                        <img src={value.cover} alt="" />
-                    </div>
-                </div>
-                )
-            })}
+                    return (
+                        <div>
+                         <div className="box sliderCard" key={index}>
+                             <div className="left">
+                                 <h1>{value.title}</h1>
+                                 <p>{value.desc}</p>
+                                 <button className='btn-primary'><Link to="/all-products">Visit Collection</Link>
+                                 </button>
+                             </div>
+                             <div className="right">
+                                 <img src={value.cover} alt="" />
+                             </div>
+                         </div>
+
+                         {/* <div className="box sliderCard secondDesign" key={index}>
+                            <div className="left">
+                                <h1>{value.title}</h1>
+                                <p>{value.desc}</p>
+                                <img src={value.cover} alt="" />
+
+                                <button className='btn-primary'><Link to="/all-products">Visit Collection</Link>
+                                </button>
+                            </div>
+                            
+                        </div> */}
+                        </div>
+                    )
+                })}
             </Slider>
         </>
     )

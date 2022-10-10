@@ -12,17 +12,17 @@ const Ndata = [
     {
       cover: "./images/arrivals/arrivals3.png",
       name: "Smart Watch",
-      price: "50",
+      price: "2000",
     },
     {
       cover: "./images/arrivals/arrivals4.png",
       name: "Lipstick",
-      price: "15",
+      price: "300",
     },
     {
       cover: "./images/arrivals/arrivals5.png",
       name: "Green Plant",
-      price: "10",
+      price: "200",
     },
     {
       cover: "./images/arrivals/arrivals6.png",

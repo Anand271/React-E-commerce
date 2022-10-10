@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Cart from './Cart'
 import "./style.css"
 
@@ -13,8 +14,10 @@ const NewArrivals = () => {
               <h2> New Arrivals</h2>
             </div>
             <div className="heading-right row">
+              <Link to="/all-products">
               <span>View all</span>
               <i className="fa fa-caret-right"></i>
+              </Link>
             </div>
           </div>
           <Cart />

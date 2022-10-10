@@ -1,6 +1,7 @@
-.shop .category{
+.shop .categeory{
     padding: 30px;
-    height: 90vh;
+    height: 100%;
+    background-color: #fff;
 }
 
 .chead h1{
@@ -14,33 +15,78 @@
     padding-left: 70px;
 }
 
-.shop .category .box{
+.main-box{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+@media screen and (max-width:850px){
+    .main-box{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .main-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+.shop .categeory{
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+.shop .categeory:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+
+.shop .categeory .box{
      background-color: #f6f9fc;
-    margin:  15px 0;
+     width: 100%;
+    margin:  10px 0;
     transition: 0.5s;
     border-radius: 5px;   
     padding: 5px 10px;
 }
 
 
-.shop .category img{
-    width: auto;
-    height: auto;
+.shop .categeory img{
+    width: 100px;
+    height: 100px;
 }
 
 
-.shop .category .box:hover{
+.shop .categeory .box:hover{
     background-color: #fff;
-    box-shadow: rgb(43 52 69 /  10%)0px 4px 16px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.shop .category .box2{
-    margin-top: 100px;
+.shop .categeory .box2{
+    margin-top: 0.5rem;
     text-align: center; 
+
+}
+
+.shop .categeory .box2 button{
+    transition: .3s;
+    cursor: pointer;
 }
 
 
-.shop .category button{
+
+.shop .categeory .box2 button:hover{
+    color: #e94560;
+}
+
+
+.shop .categeory button{
     padding: 10px;
     background: none;
     text-align: center;
@@ -50,24 +96,105 @@
 
 
 .shop .contentWidth{
-    margin-left: 30px;
-    
+    margin-top: 4rem;
+    margin-left: 30px;  
 }
 
-.grid1{
+/* .grid1{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(auto-fill, minmax(250px, 4fr));
     grid-gap: 20px;
+} */
+
+
+
+
+/* lets work on product Class */
+
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 
-.shop .product img{
-    width: 100%;
+.product-content .product .img img{
+    width: 15rem;
+  height: 19rem;
 }
 
-.shop .product{
-    transition: 0.5s;
+@media screen and (max-width:1150px){
+    .product-content .product .img img{
+        width: 12rem;
+      height: 16.5rem;
+    }
 }
 
-.shop .product:hover{
-    box-shadow: rgb(43 52 69 /  10%)0 4px 16px ;
+@media screen and (max-width:1100px){
+    .product-content .product .img img{
+        width: 10rem;
+      height: 14rem;
+    }
 }
+
+@media screen and (max-width:960px){
+    .product-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .product-content .product .img img{
+        width: 15rem;
+  height: 19rem;
+    }
+}
+
+@media screen and (max-width:640px){
+
+    .product-content .product .img img{
+        width: 12rem;
+        height: 16.5rem;
+    }
+}
+
+@media screen and (max-width:540px){
+
+    .shop .contentWidth{
+        margin-left: 0px;  
+    }
+
+    .product-content .product .img img{
+        width: 10rem;
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width:770px){
+    /* .product-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    } */
+
+    /* .product-content .product .img img{
+        width: 12rem;
+      height: 16.5rem;
+    } */
+}
+
+
+/* 
+  
+  .product .img img{
+  width: 14rem;
+  height: 18rem;
+}
+
+.product .img img{
+    width: 11rem;
+    height: 15rem;
+  } 
+
+    .product .img img{
+    width: 9rem;
+    height: 12.5rem;
+  }
+
+  */
