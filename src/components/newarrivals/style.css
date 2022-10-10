@@ -3,6 +3,36 @@
     height: 40px;
 }
 
+
+.arrivalsCart{
+    display: grid;
+    grid-gap: 1rem;
+    /* grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-template-columns: repeat(6, 1fr);  
+}
+
+@media screen and (max-width:1190px){
+    .arrivalsCart{
+     grid-template-columns: repeat(4, 1fr);  
+    }
+    
+ 
+ }
+
+@media screen and (max-width:850px){
+   .arrivalsCart{
+    grid-template-columns: repeat(3, 1fr);  
+   }
+
+}
+
+@media screen and (max-width:650px){
+    .arrivalsCart{
+     grid-template-columns: repeat(2, 1fr);  
+    }
+ 
+ }
+
 .newarrivals h4{
    font-weight: 400;
 }
@@ -14,8 +44,8 @@
 }
 
 .newarrivals .box img{
-    width: 100%;
-    height: 100%;
+    width: 10rem;
+    height: 10rem;
 }
 
 

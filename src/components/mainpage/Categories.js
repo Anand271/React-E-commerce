@@ -17,7 +17,7 @@ const Categories = () => {
       },
       {
         cateImg: "./images/category/cat4.png",
-        cateName: "Home & Garden",
+        cateName: "Home",
       },
       {
         cateImg: "./images/category/cat5.png",
@@ -29,7 +29,7 @@ const Categories = () => {
       },
       {
         cateImg: "./images/category/cat7.png",
-        cateName: "Health & Beauty",
+        cateName: "Beauty",
       },
       {
         cateImg: "./images/category/cat8.png",
@@ -55,7 +55,7 @@ const Categories = () => {
         {
             data.map((value, index) => {
                 return(
-                    <div className="box f_flex" key={index}>
+                    <div className="childOfCategory f_flex" key={index}>
                        <img src={value.cateImg} alt="" />
                        <span>{value.cateName}</span>
                     </div>

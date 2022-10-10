@@ -1,10 +1,27 @@
 import React, { useState } from 'react'
 
+// Resct toast liberay import component and css
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const ShopCart = ({ shopItems, addToCart }) => {
+
+        // code for Add to Cart Alert
+
+        const addToCartSuccessAlert = () => {
+            toast.success('Added to Cart', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }
 
     const [count, setCount] = useState(0)
     const increment = () => {
@@ -25,7 +42,7 @@ const ShopCart = ({ shopItems, addToCart }) => {
                             <div className="product mtop">
                                 <div className="img">
                                     <span className='discount'>{shopItems.discount}% Off</span>
-                                    <img src={shopItems.cover} alt="" />
+                                    <img src={shopItems.img} alt="" />
                                     <div className="product-like">
                                         <label >0</label> <br />
                                         <i className='fa-regular fa-heart' onClick={() => increment}></i>
@@ -42,9 +59,9 @@ const ShopCart = ({ shopItems, addToCart }) => {
 
                                     </div>
                                     <div className="price">
-                                        <h4>{shopItems.price}.00 $</h4>
+                                        <h4>{shopItems.price} ₹</h4>
                                         <button onClick={() => addToCart(shopItems)}>
-                                            <i className="fa fa-plus"></i>
+                                        <span onClick={addToCartSuccessAlert} >Add to cart <i class="fa-solid fa-bag-shopping"></i> </span>
                                         </button>
                                     </div>
                                 </div>
@@ -53,6 +70,7 @@ const ShopCart = ({ shopItems, addToCart }) => {
                 })
             }
 
+<ToastContainer />
 
         </>
     )

@@ -4,7 +4,7 @@ import Ndata from './Ndata'
 const Cart = () => {
     return (
         <>
-            <div className="content grid product">
+            <div className="arrivalsCart product">
                 {Ndata.map((val, index) => {
                     return (
                         <div className="box" key={index}>
@@ -12,7 +12,7 @@ const Cart = () => {
                                 <img src={val.cover} alt="" />
                             </div>
                             <h4>{val.name}</h4>
-                            <span>{val.price}.00 $</span>
+                            <span>{val.price} ₹</span>
 
                         </div>
                     )
